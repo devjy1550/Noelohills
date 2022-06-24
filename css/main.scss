@@ -1,0 +1,138 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline-style:none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #777;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Montserrat', 'Noto Sans KR', 'Malgun Gothic', 'Dotum', 'AppleGothic', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.45px;
+  line-height: 1.5;
+}
+
+// 공통주석
+// 내용의너비
+
+$innerwidth: 1320px;
+
+.clearfix::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+// .test {
+//   &::after{
+//     content:'';
+//   }
+//   &:last-child{
+//     color:red;
+//   }
+// }
+
+.inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: $innerwidth;
+  margin: 0 auto;
+}
+
+//<!-- 상단팝업 -->
+.banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+
+.banner-1 {
+  background: url('../images/banner_pc_1.jpg') no-repeat center;
+  background-size: auto;
+}
+
+.banner-2 {
+  background: url('../images/banner_pc_2.jpg') no-repeat center;
+  background-size: auto;
+}
+
+.banner-3 {
+  background: url('../images/banner_pc_3.jpg') no-repeat center;
+  background-size: auto;
+}
+
+
+// 레이아웃
+.wrap {
+  position: relative;
+  display: block;
+}
+
+// <!-- 헤더 -->
+
+.header {
+  position: relative;
+  display: block;
+}
+
+.header .inner {}
+
+// <!-- 비쥬얼 -->
+.visual {
+  position: relative;
+  display: block;
+}
+
+// <!-- 카테고리 -->
+.category {
+  position: relative;
+  display: block;
+}
+
+.category .inner {}
+
+// <!-- 사이트맵 -->
+.sitemap {
+  position: relative;
+  display: block;
+}
+
+.sitemap .inner {}
+
+// <!-- 푸터-->
+.footer {
+  position: relative;
+  display: block;
+
+  .footer-top {}
+
+  .footer-bottom {}
+}
