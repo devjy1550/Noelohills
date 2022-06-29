@@ -36,6 +36,26 @@ body {
   overflow-x: hidden;
 }
 
+::-moz-selection {
+  background: #1ABC9C;
+  color: #fff;
+}
+
+::selection {
+  background: #1ABC9C;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #1ABC9C;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #1ABC9C;
+  color: #fff;
+}
+
 .clearfix::after {
   content: "";
   position: relative;
@@ -52,10 +72,117 @@ body {
   margin: 0 auto;
 }
 
+.mb-div {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+}
+.mb-div .mb-bg {
+  position: relative;
+  width: 380px;
+  height: 100%;
+  padding: 0 30px;
+  background-color: #fff;
+}
+.mb-div .mb-bg .mb-top {
+  position: relative;
+  display: block;
+  width: 320px;
+  padding: 35px 0px 20px;
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: 35px;
+}
+.mb-div .mb-bg .mb-top .mb-top-txt {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  color: #676D72;
+}
+.mb-div .mb-bg .mb-top .login {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  color: #ffcc00;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.mb-div .mb-bg .mb-top .mb-close {
+  position: absolute;
+  right: 0px;
+  bottom: 24px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/btn-close.png") no-repeat center;
+  background-size: contain;
+  border: 0;
+  cursor: pointer;
+}
+.mb-div .mb-bg .mb-wrap {
+  position: relative;
+  display: block;
+  width: 320px;
+}
+.mb-div .mb-bg .mb-wrap .mb-menu {
+  position: relative;
+  display: block;
+}
+.mb-div .mb-bg .mb-wrap .mb-menu > li {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+}
+.mb-div .mb-bg .mb-wrap .mb-menu > li .mb-mainmenu {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.mb-div .mb-bg .mb-wrap .mb-menu > li .mb-mainmenu::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background: url("../images/ico-gnb-link-m.png") no-repeat center;
+  background-size: contain;
+}
+.mb-div .mb-bg .mb-wrap .mb-menu > li .mb-mainmenu-open {
+  color: #ffcc00;
+}
+.mb-div .mb-bg .mb-wrap .mb-menu > li .mb-mainmenu-open::after {
+  background: url("../images/ico-gnb-m-active-up.png") no-repeat center;
+  background-size: contain;
+}
+.mb-div .mb-bg .mb-wrap .mb-menu > li .mb-submenu {
+  position: relative;
+  display: none;
+}
+.mb-div .mb-bg .mb-wrap .mb-menu > li .mb-submenu li {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+.mb-div .mb-bg .mb-wrap .mb-menu > li .mb-submenu li a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+}
+
 .banner {
   position: relative;
   display: block;
-  width: 100%;
   height: 50px;
   background-color: yellow;
 }
@@ -68,13 +195,13 @@ body {
   display: block;
   height: 100%;
 }
-.banner .sw-banner .banner-1 {
+.banner .sw-banner .swiper-slide a.banner-1 {
   background: url("../images/banner_pc_1.jpg") no-repeat center;
 }
-.banner .sw-banner .banner-2 {
+.banner .sw-banner .swiper-slide a.banner-2 {
   background: url("../images/banner_pc_2.jpg") no-repeat center;
 }
-.banner .sw-banner .banner-3 {
+.banner .sw-banner .swiper-slide a.banner-3 {
   background: url("../images/banner_pc_3.jpg") no-repeat center;
 }
 .banner .sw-banner .sw-banner-control {
@@ -116,6 +243,9 @@ body {
   position: relative;
   display: block;
 }
+.wrap-fix {
+  padding-top: 80px;
+}
 
 .header {
   position: relative;
@@ -125,6 +255,31 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 1px solid #dcdcdc;
   z-index: 9999;
+}
+.header-fix {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.mb-btn {
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 30px;
+  height: 23px;
+  background: url("../images/btn-menu-line.png") no-repeat center;
+  cursor: pointer;
+}
+@media all and (max-width: 800px) {
+  .mb-btn {
+    display: block;
+  }
 }
 
 .inner {
@@ -616,6 +771,7 @@ body {
   position: relative;
   display: block;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 .footer .footer-top .inner .site-info-list li span {
   position: relative;
