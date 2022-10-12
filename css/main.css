@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&amp;family=Quicksand:wght@600;700&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +29,8 @@ html {
 }
 
 body {
-  font-family: "Montserrat", "Noto Sans KR", "Malgun Gothic", "Dotum", "AppleGothic", sans-serif;
+  font-family: "Montserrat", "Noto Sans KR", "Malgun Gothic", "Dotum",
+    "AppleGothic", sans-serif;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.45px;
@@ -37,22 +40,22 @@ body {
 }
 
 ::-moz-selection {
-  background: #1ABC9C;
+  background: #1abc9c;
   color: #fff;
 }
 
 ::selection {
-  background: #1ABC9C;
+  background: #1abc9c;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #1ABC9C;
+  background: #1abc9c;
   color: #fff;
 }
 
 ::-webkit-selection {
-  background: #1ABC9C;
+  background: #1abc9c;
   color: #fff;
 }
 
@@ -70,6 +73,133 @@ body {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
+}
+
+/* modal */
+.modal-wrap {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", Sans-serif;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999999999999999;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 560px;
+  height: 400px;
+  background-color: white;
+  border-radius: 20px;
+  border: 4px solid #0c4da2;
+}
+
+.modal-content::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -62px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  background: url("../images/MYLG.png") no-repeat center;
+  background-size: contain;
+}
+
+.modal-notice {
+  position: relative;
+  display: block;
+  padding-top: 45px;
+  padding-bottom: 20px;
+}
+
+.modal-notice p {
+  position: relative;
+  display: block;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modal-notice span {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: rgb(137, 137, 137);
+  text-align: center;
+}
+
+.modal-desc {
+  position: relative;
+  display: block;
+  width: calc(100% - 40px);
+  height: calc(100% - 240px);
+  background-color: #d0dfef;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.modal-desc span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  font-size: 20px;
+  line-height: 32px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  color: #d0dfef;
+  text-align: center;
+  background-color: #0c4da2;
+}
+
+.modal-desc .modal-comments {
+  position: absolute;
+  height: 100px;
+  display: block;
+  margin-top: 39px;
+  margin-left: 9px;
+  padding-left: 20px;
+  padding-right: 20 px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  line-height: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-desc .modal-comments li {
+  list-style: square;
+}
+
+.modal-close {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: calc(60% - 40px);
+  height: 50px;
+  border-radius: 20px;
+  font-size: 22px;
+  line-height: 50px;
+  background-color: #444;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
 }
 
 .mb-div {
@@ -101,7 +231,7 @@ body {
   position: relative;
   display: block;
   font-size: 16px;
-  color: #676D72;
+  color: #676d72;
 }
 .mb-div .mb-bg .mb-top .login {
   position: relative;
@@ -212,7 +342,11 @@ body {
   display: block;
   z-index: 9;
 }
-.banner .sw-banner .sw-banner-control .sw-banner-pgnt .swiper-pagination-bullet {
+.banner
+  .sw-banner
+  .sw-banner-control
+  .sw-banner-pgnt
+  .swiper-pagination-bullet {
   width: 10px;
   height: 4px;
   border-radius: 0;
@@ -220,7 +354,11 @@ body {
   opacity: 0.4;
   margin: 0 2px;
 }
-.banner .sw-banner .sw-banner-control .sw-banner-pgnt .swiper-pagination-bullet-active {
+.banner
+  .sw-banner
+  .sw-banner-control
+  .sw-banner-pgnt
+  .swiper-pagination-bullet-active {
   width: 20px;
   height: 4px;
   opacity: 1;
@@ -423,7 +561,8 @@ body {
   padding: 4px 8px;
   border-radius: 3px;
   font-size: 11px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .inner .member ul li a .tooltip::before {
   content: "";
@@ -578,14 +717,22 @@ body {
     top: 112.5vw;
   }
 }
-.visual .sw-visual .sw-visual-control .sw-visual-pgnt .swiper-pagination-bullet {
+.visual
+  .sw-visual
+  .sw-visual-control
+  .sw-visual-pgnt
+  .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background-color: #fff;
   opacity: 1;
   margin: 0 4px;
 }
-.visual .sw-visual .sw-visual-control .sw-visual-pgnt .swiper-pagination-bullet-active {
+.visual
+  .sw-visual
+  .sw-visual-control
+  .sw-visual-pgnt
+  .swiper-pagination-bullet-active {
   background-color: #ffcf42;
 }
 
@@ -865,4 +1012,4 @@ body {
   position: relative;
   display: block;
   font-size: 12px;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
